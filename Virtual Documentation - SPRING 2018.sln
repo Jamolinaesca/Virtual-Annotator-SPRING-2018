@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual Documentation - SPRING 2018.CSharp", "Virtual Documentation - SPRING 2018.CSharp.csproj", "{7BC7254F-9AAE-4CAF-F6FF-C3367A5A294F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual Documentation - SPRING 2018.CSharp.Editor", "Virtual Documentation - SPRING 2018.CSharp.Editor.csproj", "{75CCA028-749D-2067-6B0D-86E2916A7EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BC7254F-9AAE-4CAF-F6FF-C3367A5A294F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC7254F-9AAE-4CAF-F6FF-C3367A5A294F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC7254F-9AAE-4CAF-F6FF-C3367A5A294F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC7254F-9AAE-4CAF-F6FF-C3367A5A294F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CCA028-749D-2067-6B0D-86E2916A7EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CCA028-749D-2067-6B0D-86E2916A7EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CCA028-749D-2067-6B0D-86E2916A7EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CCA028-749D-2067-6B0D-86E2916A7EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
