@@ -11,6 +11,9 @@ public class ControllerManager : MonoBehaviour {
     SteamVR_TrackedObject trackedObj;
     SteamVR_Controller.Device controller;
 
+    public GameObject hand;
+    public GameObject mic;
+
     bool renderChange = false;
 
     void Awake()
@@ -39,24 +42,41 @@ public class ControllerManager : MonoBehaviour {
 
         if (controller.GetPressDown(triggerButton))
         {
-            //RENDER CHANGE TO MIC
-            //RECORD AUDIO
-            Debug.Log("Trigger Pressed!");
-        }
-
-        if (controller.GetPress(triggerButton))
-        {
             //SELECT
             Debug.Log("Trigger Pressed Once!");
+        }
+        else if(controller.GetPressUp(triggerButton))
+        {
+            renderChange = false;
+            Debug.Log("Trigger Pressed Up!");
+        }
+        else if (controller.GetPress(triggerButton))
+        {
+            //RECORD AUDIO
+            renderChange = true;
+            Debug.Log("Trigger Pressed!");
             controller.TriggerHapticPulse(700);
         }
-
-        if (controller.GetPress(touchpadButton))
+        else if (controller.GetPress(touchpadButton))
         {
             //PLACE
             Debug.Log("Touchpad Pressed Once!");
         }
+
+        if(renderChange)
+        {
+            mic.SetActive(true);
+            hand.SetActive(false);
+            GetComponent<SteamVR_LaserPointer>().enabled = false;
+        }
+        else
+        {
+            mic.SetActive(false);
+            hand.SetActive(true);
+            GetComponent<SteamVR_LaserPointer>().enabled = true;
+        }
     }
+
 
     /*
     private void DebugLogger(uint index, string button, string action, ControllerInteractionEventArgs e)
